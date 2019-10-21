@@ -1,0 +1,108 @@
+---
+title: The Poster Title
+author:
+  - name: A. Student
+    affil: 1
+    twitter: myTwitterHandle
+    email: a.student@dal.ca
+    main: true
+  - name: Graham A. Gagnon
+    affil: 1
+    twitter: DalWaterProf
+    email: graham.gagnon@dal.ca
+affiliation:
+  - num: 1
+    address: Centre for Water Resources Studies, Dalhousie University, Halifax, Nova Scotia, Canada
+main_findings:
+  - "This  is the giant text/**main finding** in the middle of the poster"
+  - '![](image-main.png){.main_pic}'
+logoleft_name: '![](image-main-bottom-left.png){.main-img-left}'
+logoright_name: '![](image-main-bottom-right.png){.main-img-right}'
+output: 
+  posterdown::posterdown_betterland:
+    self_contained: false
+    pandoc_args: --mathjax
+    highlight: haddock
+    number_sections: false
+link-citations: true
+bibliography: biblio.bib
+---
+
+```{r setup, include=FALSE}
+# load packages here
+library(tidyverse)
+
+# set the default ggplot2 theme
+theme_set(theme_bw(10))
+
+# this is a ggreat place to load data
+# read_csv(...)
+
+knitr::opts_chunk$set(
+  echo = FALSE, dpi = 300,
+  fig.align = "center", out.width = "100%"
+)
+```
+
+# Introduction
+
+Introduction text that nobody will ever read  but has to exist anyway goes here!
+
+## Objectives
+
+1. Start with the template
+2. Write/ create your poster content distraction free.
+3. Let posterdown do its thing!
+
+# Methods
+
+Include equations in Latex format inline like this: $E = mc^2$ or in block format like this:
+
+$$
+E = mc^2
+$$
+
+To reference a citation you can add your citations to `biblio.bib` file (in BibTeX or BibLaTeX format). For example this package is built on top of the wonderful {pagedown} package and I will cite it at the end of this sentance using this in the rmd `[@R-pagedown]` [@R-pagedown].
+
+You can include images using `knitr::include_graphics()`. Use the `out.width` chunk option to resize the image.
+
+```{r, fig.cap="A figure from a file", out.width="50%"}
+knitr::include_graphics("image-main.png")
+```
+
+<br/> <!-- insert this as many times as needed until the "Results" is at the top of the next side -->
+
+# Results
+
+You can also make figures using R (Figure 1). You can change figure sizes by setting  the `fig.height` and `out.width` chunk options. (Figure 2).
+
+```{r, fig.cap="Here is a caption for the figure. This can be added by using the 'fig.cap' option in the r code chunk options", fig.height=3}
+ggplot(iris, aes(Sepal.Width, Sepal.Length)) +
+  geom_point()
+```
+
+You can create tables using `knitr::kable()` (Table 1).
+
+```{r}
+mpg %>%
+head(3) %>%
+  select(
+    Make = manufacturer, 
+    Model = model, 
+    Year = year, 
+    `Milage (city)` = cty,
+    `Milage (highway)` = hwy
+  ) %>%
+  knitr::kable(
+    caption = "This is  the table caption."
+  )
+```
+
+# Printing
+
+Open the `.html` file in Google Chrome, and File > Print (save to PDF).
+
+# References
+
+<!-- this section is generated automatically if you use [@ref_key] for citations -->
+<!-- If you don't, you can paste your references here -->
