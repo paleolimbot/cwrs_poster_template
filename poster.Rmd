@@ -1,5 +1,5 @@
 ---
-title: The Poster Title
+title: "The Poster Title: Is It Really A Poster?"
 author:
   - name: A. Student
     affil: 1
@@ -16,7 +16,7 @@ affiliation:
 main_findings:
   - "This  is the giant text/**main finding** in the middle of the poster"
   - '![](image-main.png){.main_pic}'
-logoleft_name: '![](image-main-bottom-left.png){.main-img-left}'
+logoleft_name: '![](qr-cwrs.svg){.main-img-left}'
 logoright_name: '![](image-main-bottom-right.png){.main-img-right}'
 output: 
   posterdown::posterdown_betterland:
@@ -24,8 +24,8 @@ output:
     pandoc_args: --mathjax
     highlight: haddock
     number_sections: false
+    css: poster.css
 link-citations: true
-bibliography: biblio.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -48,12 +48,6 @@ knitr::opts_chunk$set(
 
 Introduction text that nobody will ever read  but has to exist anyway goes here!
 
-## Objectives
-
-1. Start with the template
-2. Write/ create your poster content distraction free.
-3. Let posterdown do its thing!
-
 # Methods
 
 Include equations in Latex format inline like this: $E = mc^2$ or in block format like this:
@@ -62,8 +56,6 @@ $$
 E = mc^2
 $$
 
-To reference a citation you can add your citations to `biblio.bib` file (in BibTeX or BibLaTeX format). For example this package is built on top of the wonderful {pagedown} package and I will cite it at the end of this sentance using this in the rmd `[@R-pagedown]` [@R-pagedown].
-
 You can include images using `knitr::include_graphics()`. Use the `out.width` chunk option to resize the image.
 
 ```{r, fig.cap="A figure from a file", out.width="50%"}
@@ -71,6 +63,10 @@ knitr::include_graphics("image-main.png")
 ```
 
 <br/> <!-- insert this as many times as needed until the "Results" is at the top of the next side -->
+<br/>
+<br/>
+<br/>
+<br/>
 
 # Results
 
@@ -104,5 +100,24 @@ Open the `.html` file in Google Chrome, and File > Print (save to PDF).
 
 # References
 
-<!-- this section is generated automatically if you use [@ref_key] for citations -->
-<!-- If you don't, you can paste your references here -->
+Xie, Yihui, Romain Lesur, and Brent Thorne. 2019. Pagedown: Paginate the Html Output of R Markdown with Css for Print. https://CRAN.R-project.org/package=pagedown.
+
+<!-- water studies/dal  logos -->
+<div class="figure" style="text-align: center">
+  <img src="logos/water-studies.png" style="width:40%; display: inline-block"/>
+  <img src="logos/dalhousie.png" style="width:40%; display: inline-block"/>
+</div>
+
+<!-- partner logos --->
+
+<div class="figure" style="text-align: center; vertical-align: middle">
+  <img src="logos/agat.png" style="width:15%; display: inline-block"/>
+  <img src="logos/aquisense.png" style="width:15%; display: inline-block"/>
+  <img src="logos/cbcl.png" style="width:15%; display: inline-block"/>
+  <img src="logos/cbrm-water-utility.png" style="width:15%; display: inline-block"/>
+  <img src="logos/halifax-water.png" style="width:15%; display: inline-block"/>
+  <img src="logos/luminultra.png" style="width:15%; display: inline-block"/>
+  <img src="logos/mantech.png" style="width:15%; display: inline-block"/>
+  <img src="logos/moncton.png" style="width:15%; display: inline-block"/>
+  <img src="logos/nserc.png" style="width:15%; display: inline-block"/>
+</div>
