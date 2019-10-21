@@ -15,14 +15,12 @@ affiliation:
     address: Centre for Water Resources Studies, Dalhousie University, Halifax, Nova Scotia, Canada
 main_findings:
   - "This  is the giant text/**main finding** in the middle of the poster"
-  - '![](image-main.png){.main_pic}'
-logoleft_name: '![](qr-cwrs.svg){.main-img-left}'
-logoright_name: '![](image-main-bottom-right.png){.main-img-right}'
+  - '![](image-main.jpeg){.main_pic}'
+logoright_name: '![](logos/qr-cwrs.svg){.main-img-right}'
 output: 
   posterdown::posterdown_betterland:
     self_contained: false
     pandoc_args: --mathjax
-    highlight: haddock
     number_sections: false
     css: poster.css
 link-citations: true
@@ -59,13 +57,21 @@ $$
 You can include images using `knitr::include_graphics()`. Use the `out.width` chunk option to resize the image.
 
 ```{r, fig.cap="A figure from a file", out.width="50%"}
-knitr::include_graphics("image-main.png")
+knitr::include_graphics("image-main.jpeg")
 ```
 
+You can use markdown formatting like *italics*, **bold**, and bullets, like so:
+
+- First bullet
+- Second bullet
+- Third bullet
+
+Or numbered bullets:
+
+1. Number one
+2. Number two
+
 <br/> <!-- insert this as many times as needed until the "Results" is at the top of the next side -->
-<br/>
-<br/>
-<br/>
 <br/>
 
 # Results
@@ -110,14 +116,14 @@ Xie, Yihui, Romain Lesur, and Brent Thorne. 2019. Pagedown: Paginate the Html Ou
 
 <!-- partner logos --->
 
-<div class="figure" style="text-align: center; vertical-align: middle">
-  <img src="logos/agat.png" style="width:15%; display: inline-block"/>
-  <img src="logos/aquisense.png" style="width:15%; display: inline-block"/>
-  <img src="logos/cbcl.png" style="width:15%; display: inline-block"/>
-  <img src="logos/cbrm-water-utility.png" style="width:15%; display: inline-block"/>
-  <img src="logos/halifax-water.png" style="width:15%; display: inline-block"/>
-  <img src="logos/luminultra.png" style="width:15%; display: inline-block"/>
-  <img src="logos/mantech.png" style="width:15%; display: inline-block"/>
-  <img src="logos/moncton.png" style="width:15%; display: inline-block"/>
-  <img src="logos/nserc.png" style="width:15%; display: inline-block"/>
+<div class="figure figure-partner">
+  <img src="logos/nserc.png"/>
+  <img src="logos/halifax-water.png"/>
+  <img src="logos/cbrm-water-utility.png"/>
+  <img src="logos/moncton.png"/>
+  <img src="logos/agat.png"/>
+  <img src="logos/mantech.png"/>
+  <img src="logos/cbcl.png"/>
+  <img src="logos/luminultra.png"/>
+  <img src="logos/aquisense.png"/>
 </div>

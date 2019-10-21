@@ -1,4 +1,27 @@
 
 div.main {
-  background-image: linear-gradient(#0b4545 50%, #00A0A0);
+  background-image: linear-gradient(#285aac 50%, #46a4db);
+}
+
+h3#author  {
+  color: #285aac;
+}
+
+.author sup, .author_extra sup, #affiliation sup {
+  color: black;
+}
+
+h5.author_extra {
+  color: #46a4db;
+}
+
+.figure-partner {
+  margin-top: 1em;
+  text-align: center
+}
+
+.figure-partner img {
+  width: 15%;
+  margin: 3mm;
+  display: inline-block
 }
