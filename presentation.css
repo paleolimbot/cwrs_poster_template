@@ -1,4 +1,41 @@
 
+a, a > code {
+	color: #285aac;
+}
+
+.footnote {
+	bottom: 0;
+	opacity: 0.75;
+	font-size:  0.7em;
+}
+
+.footnote p {
+  margin-bottom: 12px;
+}
+
+.remark-slide-number {
+  font-size: 0.7em;
+}
+
+.remark-slide-content {
+	background-image: url("logos/water-base.png");
+	background-size: contain;
+	background-position: bottom;
+}
+
+.inverse {
+	background-image: none;
+}
+
+.title-slide {
+  padding-bottom: 100px;
+}
+
+
+.title-slide h1 {
+  padding-bottom: 80px;
+}
+
 .figure-partner {
   margin-top: 1em;
   text-align: center

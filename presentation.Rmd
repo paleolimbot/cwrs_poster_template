@@ -1,9 +1,8 @@
 ---
 title: "My Presentation Title"
-subtitle: "My presentation subtitle"
-author: "A. Student, Graham A. Gagnon^1^"
-institute: "^1^Centre for Water Resources Studies, Dalhousie University"
-date: "`r Sys.Date()`"
+subtitle: ""
+author: "A. Student, Graham A. Gagnon"
+institute: "Centre for Water Resources Studies<br/>Dalhousie University"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -13,10 +12,12 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      titleSlideClass: ["title-slide", "middle"]
 ---
 
 ```{r setup, include=FALSE}
 library(tidyverse)
+theme_set(theme_bw())
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(dpi = 300, fig.align = "center", echo = FALSE, fig.height = 4)
 ```
@@ -108,7 +109,7 @@ knitr::kable(head(iris), format = 'html')
 
 # Acknowledgements
 
-The research team acknowledges the support from *insert industrial partner*.
+The research team acknowledges the support from...
 
 <!-- water studies/dal  logos -->
 <div class="figure" style="text-align: center">
@@ -131,5 +132,5 @@ The research team acknowledges the support from *insert industrial partner*.
 </div>
 
 .footnote[
-Slides created using [**xaringan**](https://github.com/yihui/xaringan), [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+Slides created using [xaringan](https://github.com/yihui/xaringan), [remark.js](https://remarkjs.com), [knitr](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
 ]
