@@ -1,0 +1,11 @@
+
+.figure-partner {
+  margin-top: 1em;
+  text-align: center
+}
+
+.figure-partner img {
+  width: 15%;
+  margin: 3mm;
+  display: inline-block
+}

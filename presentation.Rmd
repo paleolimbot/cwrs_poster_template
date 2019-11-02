@@ -1,0 +1,135 @@
+---
+title: "My Presentation Title"
+subtitle: "My presentation subtitle"
+author: "A. Student, Graham A. Gagnon^1^"
+institute: "^1^Centre for Water Resources Studies, Dalhousie University"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    self_contained: true
+    css: [default, default-fonts, presentation.css]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(dpi = 300, fig.align = "center", echo = FALSE, fig.height = 4)
+```
+
+# The title of a slide
+
+The content of the slide, using some *basic* **markdown** syntax. You can include images using `knitr::include_graphics()`. Use the `out.width` chunk option to resize the image.
+
+```{r, fig.cap="A figure from a file", out.width="50%"}
+knitr::include_graphics("image-main.jpeg")
+```
+
+<!-- the '---' creates a new slide -->
+
+---
+class: center, middle
+
+# Centred slide content
+
+### (with a subheading)
+
+---
+class: inverse
+
+# Resist the dark slide!
+
+But actually, you can totally make slides dark [1].
+
+.footnote[
+[1] And include footnotes.
+]
+
+---
+
+Slides don't have to have a title either.
+
+---
+background-image: url("image-main.jpeg")
+background-size: cover
+
+<!-- this is a single huge image on a slide -->
+
+---
+
+# A two-column slide
+
+Some differences between using remark.js (left) and using **xaringan** (right):
+
+.pull-left[
+- bullet 1
+- bullet 2
+- bullet 3
+]
+
+.pull-right[
+- bullet 1
+- bullet 2
+- bullet 3
+]
+
+---
+
+# Math Expressions
+
+You can write LaTeX math expressions inside a pair of dollar signs, e.g. $E = mc^2$. You can use the display style with double dollar signs:
+
+$$E = mc^2$$
+
+---
+
+# R Plots
+
+```{r}
+ggplot(mpg, aes(cty, hwy))  +
+  geom_point()
+```
+
+---
+
+# Tables
+
+If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
+
+```{r}
+knitr::kable(head(iris), format = 'html')
+```
+
+---
+
+# Acknowledgements
+
+The research team acknowledges the support from *insert industrial partner*.
+
+<!-- water studies/dal  logos -->
+<div class="figure" style="text-align: center">
+  <img src="logos/water-studies.png" style="width:40%; display: inline-block"/>
+  <img src="logos/dalhousie.png" style="width:40%; display: inline-block"/>
+</div>
+
+<!-- partner logos --->
+
+<div class="figure figure-partner">
+  <img src="logos/nserc.png"/>
+  <img src="logos/halifax-water.png"/>
+  <img src="logos/cbrm-water-utility.png"/>
+  <img src="logos/moncton.png"/>
+  <img src="logos/agat.png"/>
+  <img src="logos/mantech.png"/>
+  <img src="logos/cbcl.png"/>
+  <img src="logos/luminultra.png"/>
+  <img src="logos/aquisense.png"/>
+</div>
+
+.footnote[
+Slides created using [**xaringan**](https://github.com/yihui/xaringan), [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+]
