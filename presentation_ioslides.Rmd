@@ -1,0 +1,50 @@
+---
+title: "Land-use controls on spatiotemporal trace metal accumulation in Maritime Canadian lakes"
+author: "Dewey W. Dunnington^1^, Ian S. Spooner^2^, Joshua Kurek^3^, Chris E. White^4^, R. Jack Cornett^5^, and Graham A. Gagnon^1^"
+date: ""
+output: 
+  ioslides_presentation:
+    df_print: kable
+    transition: faster
+    css: presentation_ioslides.css
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+knitr::opts_chunk$set(echo = FALSE, fig.height = 4)
+```
+
+## Metals in the Maritimes
+
+- New slides start with `##`
+
+<span class="reference">Dunnington et al. (in press, Environmental Pollution)<span>
+
+## Acknowledgements
+
+The research team acknowledges the support from...
+
+<!-- water studies/dal  logos -->
+<div class="figure" style="text-align: center">
+  <img src="logos/water-studies.png" style="width:40%; display: inline-block"/>
+  <img src="logos/dalhousie.png" style="width:40%; display: inline-block"/>
+</div>
+
+<!-- partner logos --->
+
+<div class="figure figure-partner">
+  <img src="logos/nserc.png"/>
+  <img src="logos/halifax-water.png"/>
+  <img src="logos/cbrm-water-utility.png"/>
+  <img src="logos/moncton.png"/>
+  <img src="logos/agat.png"/>
+  <img src="logos/mantech.png"/>
+  <img src="logos/cbcl.png"/>
+  <img src="logos/luminultra.png"/>
+  <img src="logos/aquisense.png"/>
+</div>
+
+<span class="reference">
+Slides created using [xaringan](https://github.com/yihui/xaringan), [remark.js](https://remarkjs.com), [knitr](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+<span>
+

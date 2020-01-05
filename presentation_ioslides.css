@@ -1,0 +1,70 @@
+.title-slide {
+  padding: 40px;
+}
+
+.title-slide hgroup {
+  position: static;
+  text-align: center;
+}
+
+.title-slide hgroup h1 {
+  font-weight: 300;
+}
+
+slides > slide {
+  background-image: url("logos/water-base.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 100px;
+}
+
+/* This is useful for a footer on each slide
+article:after {
+    content: '@paleolimbot goo.gl/hL23TX';
+    position: absolute;
+    font-size: 12pt;
+    bottom: 5px;
+    left: 35px;
+    height: 40px;
+    width: 50%;
+}
+*/
+
+.kable-table {
+  overflow-x: scroll;
+}
+
+.kable-table table.rmdtable td, .kable-table table.rmdtable th {
+  font-size: 0.6em;
+  white-space: nowrap
+}
+
+.kable-table table.rmdtable tr > td:first-child {
+  font-weight: inherit;
+  color: inherit;
+}
+
+.kable-table table.rmdtable th {
+  background: #FFFFFF;
+  color: #000000;
+  font-weight: bold;
+  border-bottom: 2px solid #000000;
+  padding: 0.5em;
+}
+
+.reference {
+  position: absolute;
+  bottom: 20px;
+  font-size: 0.6em;
+}
+
+.figure-partner {
+  margin-top: 1em;
+  text-align: center
+}
+
+.figure-partner img {
+  width: 15%;
+  margin: 3mm;
+  display: inline-block
+}
